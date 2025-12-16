@@ -1,19 +1,14 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
 import RegistroComponent from "../Componentes/Registro";
+import {styles} from "../Estilos/estiloregistro"
 
 const Registro = ({ navigation }: any) => {
   return (
-    <View style={styles.container}>
+    <View>
       <RegistroComponent navigation={navigation} />
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
 
 export default Registro;

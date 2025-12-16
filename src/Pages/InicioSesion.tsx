@@ -1,19 +1,14 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
 import Signin from "../Componentes/InicioSesion";
+import {styles} from "../Estilos/estiloiniciosesion"
 
 const InicioSesion = ({ navigation }: any) => {
   return (
-    <View style={styles.container}>
+    <View>
       <Signin navigation={navigation} />
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
 
 export default InicioSesion;

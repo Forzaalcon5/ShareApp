@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { ScrollView, StyleSheet, View, TouchableOpacity, Text } from 'react-native';
+import { ScrollView, View, TouchableOpacity, Text } from 'react-native';
 import Menu from '../Componentes/Menu';
 import Posts from '../Componentes/Posts';
 import ChatBoth from '../Componentes/ChatBoth';
 import CrearPost from '../Componentes/CrearPosts';
+import {styles} from '../Estilos/estiloprincipal';
 
 const Principal = ({ navigation }: any) => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -19,7 +20,7 @@ const Principal = ({ navigation }: any) => {
   const handleCreatePost = (text: string) => {
     const newPost = {
       id: publicaciones.length + 1,
-      username: 'Usuario', // Aquí después pondrás el nombre del usuario logueado
+      username: 'Usuario',
       text: text,
       avatar: 'https://via.placeholder.com/55'
     };
@@ -27,15 +28,10 @@ const Principal = ({ navigation }: any) => {
   };
 
   return (
-    <View style={styles.container}>
-      <ScrollView 
-        style={styles.scrollView}
-        contentContainerStyle={styles.content}
-        showsVerticalScrollIndicator={false}
-      >
+    <View>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <Menu navigation={navigation} />
         
-        {/* Renderiza todas las publicaciones */}
         {publicaciones.map((post) => (
           <Posts 
             key={post.id}
@@ -46,16 +42,13 @@ const Principal = ({ navigation }: any) => {
         ))}
       </ScrollView>
       
-      {/* Botón flotante para crear publicación */}
       <TouchableOpacity
-        style={styles.createButton}
         onPress={() => setModalVisible(true)}
         activeOpacity={0.8}
       >
-        <Text style={styles.createButtonText}>+</Text>
+        <Text>+</Text>
       </TouchableOpacity>
 
-      {/* Modal para crear publicación */}
       <CrearPost
         visible={modalVisible}
         onClose={() => setModalVisible(false)}
@@ -66,40 +59,5 @@ const Principal = ({ navigation }: any) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#000',
-  },
-  scrollView: {
-    flex: 1,
-  },
-  content: {
-    paddingBottom: 100,
-  },
-  createButton: {
-    position: 'absolute',
-    bottom: 20, // ← Mismo bottom que el ChatBot
-    left: 20,   // ← A la izquierda
-    width: 60,
-    height: 60,
-    borderRadius: 30,
-    backgroundColor: '#0098ff',
-    justifyContent: 'center',
-    alignItems: 'center',
-    elevation: 8,
-    shadowColor: '#0098ff',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.6,
-    shadowRadius: 10,
-  },
-  createButtonText: {
-    color: 'white',
-    fontSize: 32,
-    fontWeight: '700',
-    lineHeight: 36,
-  },
-});
 
 export default Principal;
