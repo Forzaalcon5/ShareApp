@@ -1,0 +1,75 @@
+import { StyleSheet } from 'react-native';
+
+export const styles = StyleSheet.create({
+  container: {
+    margin: 20,
+    borderRadius: 12,
+    overflow: 'hidden',
+    elevation: 8,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.2,
+    shadowRadius: 15,
+  },
+  menu: {
+    paddingVertical: 25,
+    paddingHorizontal: 40,
+    alignItems: 'center',
+    gap: 20,
+  },
+  titulomenu: {
+    color: 'white',
+    fontSize: 32,
+    fontWeight: '700',
+    textAlign: 'center',
+  },
+  menuBotones: {
+    flexDirection: 'row',
+    gap: 20,
+    alignItems: 'center',
+    width: '100%',
+    justifyContent: 'center',
+  },
+  botonPrincipal: {
+    paddingVertical: 12,
+    paddingHorizontal: 30,
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: 'rgba(255, 255, 255, 0.3)',
+  },
+  botonPrincipalTexto: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: '600',
+  },
+  perfilmenu: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 30,
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+  },
+  avatarPlaceholder: {
+    width: 45,
+    height: 45,
+    borderRadius: 22.5,
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 3,
+    borderColor: 'white',
+  },
+  avatarText: {
+    color: '#0098ff',
+    fontSize: 16,
+    fontWeight: '700',
+  },
+  perfiltexto: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+});

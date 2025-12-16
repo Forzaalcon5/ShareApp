@@ -1,0 +1,86 @@
+import { StyleSheet } from 'react-native';
+
+export const styles = StyleSheet.create({
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  modalContainer: {
+    width: '90%',
+    maxWidth: 500,
+    borderRadius: 20,
+    overflow: 'hidden',
+    elevation: 20,
+    shadowColor: '#0098ff',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.8,
+    shadowRadius: 20,
+  },
+  modalContent: {
+    padding: 25,
+  },
+  modalTitle: {
+    color: 'white',
+    fontSize: 26,
+    fontWeight: '700',
+    marginBottom: 20,
+    textAlign: 'center',
+  },
+  inputContainer: {
+    backgroundColor: 'rgba(255, 255, 255, 0.95)',
+    borderRadius: 15,
+    padding: 15,
+    marginBottom: 20,
+    borderWidth: 2,
+    borderColor: 'rgba(255, 255, 255, 0.3)',
+  },
+  textArea: {
+    color: '#000',
+    fontSize: 16,
+    minHeight: 150,
+    textAlignVertical: 'top',
+    marginBottom: 10,
+  },
+  charCount: {
+    color: '#666',
+    fontSize: 12,
+    textAlign: 'right',
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    gap: 15,
+  },
+  publishBtn: {
+    flex: 1,
+    backgroundColor: 'white',
+    padding: 15,
+    borderRadius: 12,
+    alignItems: 'center',
+    elevation: 5,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 5,
+  },
+  publishBtnText: {
+    color: '#0052cc',
+    fontWeight: '700',
+    fontSize: 16,
+  },
+  cancelBtn: {
+    flex: 1,
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    padding: 15,
+    borderRadius: 12,
+    alignItems: 'center',
+    borderWidth: 2,
+    borderColor: 'rgba(255, 255, 255, 0.4)',
+  },
+  cancelBtnText: {
+    color: 'white',
+    fontWeight: '700',
+    fontSize: 16,
+  },
+});
